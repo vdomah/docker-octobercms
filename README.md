@@ -20,6 +20,18 @@
     ````$xslt
     docker-compose exec web theme build THEME_NAME
     ````
+   
+
+## Aliases
+Artisan:
+````bash
+docker-compose exec web artisan {command}
+````
+
+Tinker:
+````bash
+docker-compose exec web tinker
+````
     
 As result, you'll be able to see in your browser:
 
