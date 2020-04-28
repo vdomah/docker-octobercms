@@ -10,8 +10,13 @@
     ````$xslt
     docker-compose up --build
     ````
+    
+5. Run docker in background:
+    ````$xslt
+    docker-compose up -d
+    ````
 
-5. [OPTIONAL] Run the following command if you need to build your assets. Replace THEME_NAME by your theme directory name.
+6. [OPTIONAL] Run the following command if you need to build your assets. Replace THEME_NAME by your theme directory name.
     ````$xslt
     docker-compose exec php theme build THEME_NAME
     ````
