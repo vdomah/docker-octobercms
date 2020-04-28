@@ -13,10 +13,16 @@
     
 5. Run docker in background:
     ````$xslt
-    docker-compose up -d
+    docker-compose run -d
     ````
 
 6. [OPTIONAL] Run the following command if you need to build your assets. Replace THEME_NAME by your theme directory name.
     ````$xslt
-    docker-compose exec php theme build THEME_NAME
+    docker-compose exec web theme build THEME_NAME
     ````
+    
+As result, you'll be able to see in your browser:
+
+Project: http://127.0.0.1:8080/
+
+Adminer: http://127.0.0.1:6080/
