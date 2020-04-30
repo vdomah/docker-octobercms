@@ -6,9 +6,12 @@ services:
     build: ./web
     environment:
       - APACHE_RUN_USER=www-data
+      - APP_PATH_CONTAINER=${APP_PATH_CONTAINER}
     volumes:
       - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
       - ./theme.sh:/usr/local/bin/theme:ro
+      - ./web/artisan:/usr/local/bin/artisan:ro
+      - ./web/tinker:/usr/local/bin/tinker:ro
     ports:
       - 8080:80
     working_dir: ${APP_PATH_CONTAINER}
